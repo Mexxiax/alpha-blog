@@ -10,13 +10,16 @@ class ArticlesController < ApplicationController
     end
 
     def new
+        @article = Article.new #para carregar na criação de artigos
     end
 
     def create
         #render plain: params[:article]
         @article = Article.new(params.require(:article).permit(:title, :description))
         #render plain: @article.inspect
-        @article.save
+        return render 'new' unless @article.save
+
+        flash[:notice] = "Article was created successfully"
         redirect_to @article
     end
 
