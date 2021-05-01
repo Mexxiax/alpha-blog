@@ -15,7 +15,11 @@
                     <td><%= article.id %></td>
                     <td><%= article.title %></td>
                     <td><%= article.description %></td>
-                    <td><%= article.id %></td>
+                    <td>
+                        <span><%= link_to 'Show', article_path(article) %></span>
+                        <span><%= link_to 'Edit', edit_article_path(article) %></span>
+                        <span><%= link_to 'Delete', article_path(article), method: :delete %></span>
+                    </td>
                 </tr>
             <% end %>
         </tbody>
