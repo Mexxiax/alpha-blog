@@ -1,0 +1,23 @@
+<div style="width: 100%; text-align: center">
+    <h1>Articles List Page</h1>
+    <table style="width: 100%">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @articles.each do |article| %>
+                <tr>
+                    <td><%= article.id %></td>
+                    <td><%= article.title %></td>
+                    <td><%= article.description %></td>
+                    <td><%= article.id %></td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>
