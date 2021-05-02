@@ -15,7 +15,18 @@
     float: right;
     margin-right: 15px;
     border: 2px solid green;
+    background-color: green;
     border-radius: 2px; 
     color: white;
     font-size: 18px;
+    padding: 5px;
+}
+
+.new-btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.new-btn b {
+    font-size: 20px;
 }
