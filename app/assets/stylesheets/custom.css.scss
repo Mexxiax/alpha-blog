@@ -1,5 +1,21 @@
 @import 'bootstrap/dist/css/bootstrap';
 
 .navbar {
-    background-color: #3a6fcfa6 !important;
+  background-color:black !important;
+  color: white !important;
 }
+
+#nav-custom-logo {
+  color: white !important;
+}
+
+.new-btn {
+  float: right;
+  margin-right: 15px;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+

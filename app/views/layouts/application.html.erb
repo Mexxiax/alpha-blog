@@ -11,19 +11,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-light bg-light">
-      <div class="container-fluid d-flex justify-content-between">
-        <a class="navbar-brand"><b>Alpha-Blog</b></a>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-        <span class="d-flex">
-          <span><button>Log In</button></span>&nbsp;
-          <span><button>Sign In</button></span>
-        </span>
-      </div>
-    </nav>
+    <%= render 'layouts/nav' %>
     <%= render 'layouts/messages' %>
     <%= yield %>
   </body>

@@ -1,8 +1,10 @@
 <div style="width: 100%; text-align: center;">
     <h1>Articles List Page</h1>
-    <span class="new-btn">
-        <%= link_to 'New Article', new_article_path%> <b>+</b>
-    </span>
+    <div class="row">
+        <button class="new-btn btn btn-primary">
+            <%= link_to 'New Article', new_article_path%>
+        </button>
+    </div>
     <table class="index-table">
         <thead>
             <tr>
