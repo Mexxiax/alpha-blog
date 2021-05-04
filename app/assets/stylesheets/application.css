@@ -16,16 +16,4 @@
  *= require_self
  */
 
-.index-table {
-    width: 100%;
- }
-
-.index-table  table, td {
-    border: 1px solid grey;
-}
-
-.index-table th {
-    background-color: grey;
-    color: white;
-}
 

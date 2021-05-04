@@ -11,11 +11,23 @@
 
 .new-btn {
   float: right;
-  margin-right: 15px;
-
   a {
     text-decoration: none;
     color: white;
   }
 }
 
+
+
+.index-table {
+  width: 100%;
+}
+
+.index-table  table, td {
+  border: 1px solid grey;
+}
+
+.index-table th {
+  background-color: grey;
+  color: white;
+}

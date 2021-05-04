@@ -5,7 +5,6 @@ class ArticlesController < ApplicationController
     @articles = Article.all
   end
 
-
   def show; end
 
   def new
@@ -13,20 +12,19 @@ class ArticlesController < ApplicationController
   end
 
   def edit; end
-  
 
   def create
     #render plain: params[:article]
     #render plain: @article.inspect
     @article = Article.new(article_params)
-    return render 'new' unless @article.save
+    return render "new" unless @article.save
 
     flash[:notice] = "Article was created successfully"
     redirect_to @article
   end
-  
+
   def update
-    return render 'edit' unless @article.update(article_params)
+    return render "edit" unless @article.update(article_params)
 
     flash[:notice] = "Article was edited successfully"
     redirect_to @article
@@ -46,5 +44,4 @@ class ArticlesController < ApplicationController
   def article_params
     params.require(:article).permit(:title, :description)
   end
-
 end
