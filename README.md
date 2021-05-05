@@ -7,3 +7,5 @@
 * production deploy: git push heroku "branch"
 
 * production migrations: heroku run rails db:migrate
+
+* Bootstrap Icons on Production: config.assets.compile = true on /config/environments/production.rb
