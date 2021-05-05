@@ -5,3 +5,5 @@
 * rbenv global 2.6.6
 
 * production deploy: git push heroku "branch"
+
+* production migrations: heroku run rails db:migrate

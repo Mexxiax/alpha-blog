@@ -1,5 +1,11 @@
 @import 'bootstrap/dist/css/bootstrap';
 
+html,
+body {
+  height: 100%;
+}
+
+
 .navbar {
   background-color:black !important;
   color: white !important;
@@ -52,4 +58,13 @@
 .index-table th {
   background-color: grey;
   color: white;
+}
+
+#page-content {
+  flex: 1 0 auto;
+  background-color: whitesmoke;
+}
+
+#sticky-footer {
+  flex-shrink: none;
 }
