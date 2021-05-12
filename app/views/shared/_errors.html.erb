@@ -1,6 +1,6 @@
 <% if obj.errors.any? %>
   <div class="alert alert-danger alert-dismissible fade show" role="alert">
-    <h4 class="alert-heading">The following errors prevented the article from being save</h4>
+    <h4 class="alert-heading">The following errors prevented the <%= obj.class.name.downcase %> from being save</h4>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
