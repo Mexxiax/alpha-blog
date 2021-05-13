@@ -7,4 +7,10 @@
 </div>
 
 <h3 class="text-center mt-4">Articles</h3>
+<div class="apple_pagination">
+  <%= will_paginate @articles, :container => false %>
+</div>
 <%= render 'articles/article' %>
+<div class="apple_pagination">
+  <%= will_paginate @articles, :container => false %>
+</div>
