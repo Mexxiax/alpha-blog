@@ -9,8 +9,10 @@
                     <h5 class="card-title "><%= link_to article.title, article_path(article), class: "text-primary" %></h5>
                     <p class="card-text"><%= simple_format(truncate(article.description, length: 500)) %></p>
                     <%= link_to "View", article_path(article), class: "btn btn-outline-success" %>
-                    <%= link_to "Edit", edit_article_path(article), class: "btn btn-outline-primary" %>
-                    <%= link_to "Delete", article_path(article), class: "btn btn-outline-danger", method: :delete, data: {confirm: "Are you sure?"} %>
+                    <% if logged_in? && article.user == current_user %>
+                        <%= link_to "Edit", edit_article_path(article), class: "btn btn-outline-primary" %>
+                        <%= link_to "Delete", article_path(article), class: "btn btn-outline-danger", method: :delete, data: {confirm: "Are you sure?"} %>
+                    <%end%>
                 </div>
                 <div class="card-footer text-muted">
                     <small>
