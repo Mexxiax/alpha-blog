@@ -29,6 +29,8 @@
           <%= link_to "View", user_path(current_user), class: "dropdown-item" %>
           <div class="dropdown-divider"></div>
           <%= link_to "Edit", edit_user_path(current_user), class: "dropdown-item" %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "Delete", user_path(current_user), class: "dropdown-item text-danger", method: :delete, data: { confirm: "Are you sure?" } %>
         </div>
       </li>
       <% else %>
