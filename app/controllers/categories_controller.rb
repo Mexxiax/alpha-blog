@@ -12,6 +12,20 @@ class CategoriesController < ApplicationController
     flash[:notice] = "Category was created successfully"
     redirect_to @category
   end
+  
+  def edit
+    @category = Category.find(params[:id])
+  end
+
+  def update
+    @category = Category.find(params[:id])
+    if @category.update(category_params)
+      flash[:notice] = "Category name updated successfully"
+      redirect_to @category
+    else
+      render 'edit'
+    end
+  end
 
   def index
     @categories = Category.paginate(page: params[:page], per_page: 5).order("id DESC")
